@@ -1,0 +1,12 @@
+[submodule "slam_gmapping"]
+	path = slam_gmapping
+	url = https://github.com/ros-perception/slam_gmapping
+[submodule "turtlebot"]
+	path = turtlebot
+	url = https://github.com/turtlebot/turtlebot
+[submodule "turtlebot_simulator"]
+	path = turtlebot_simulator
+	url = https://github.com/turtlebot/turtlebot_simulator
+[submodule "turtlebot_interactions"]
+	path = turtlebot_interactions
+	url = https://github.com/turtlebot/turtlebot_interactions
