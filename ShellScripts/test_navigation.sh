@@ -12,5 +12,3 @@ sleep 5
 xterm  -e  " source $DIR/catkin_ws/devel/setup.bash; roslaunch turtlebot_gazebo amcl_demo.launch map_file:=$DIR/catkin_ws/src/home_service_robot/World/my_map.yaml" &
 sleep 5
 xterm  -e  " source $DIR/catkin_ws/devel/setup.bash; roslaunch turtlebot_rviz_launchers view_navigation.launch" &
-sleep 5
-#xterm  -e  " source $DIR/catkin_ws/devel/setup.bash; roslaunch turtlebot_teleop keyboard_teleop.launch"
