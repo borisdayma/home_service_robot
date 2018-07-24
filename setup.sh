@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # initialize environment to run project
+# run from your home directory
 
 # install required packages
 sudo apt-get update
