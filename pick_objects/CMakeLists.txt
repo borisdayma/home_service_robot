@@ -7,7 +7,7 @@ project(pick_objects)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED message_generation move_base_msgs roscpp actionlib)
+find_package(catkin REQUIRED message_generation move_base_msgs roscpp actionlib std_msgs genmsg)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
