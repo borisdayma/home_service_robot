@@ -2,7 +2,7 @@
 
 *This repository presents my solution to the Udacity Home Service Robot Project. A SLAM algorithm is used to create a map of an environment. Then the map is used to localize a robot and plan its trajectory towards an object to pick-up and drop it off at another location. The entire project is created through ROS packages.*
 
-TODO insert picture
+![alt text](imgs/intro.jpg)
 
 ## Objective
 
@@ -21,7 +21,16 @@ The robot used for navigation is *turtlebot* present as a standard ROS package.
 
 ## Architecture
 
-TODO define package architecture
+The project is made of several ROS packages:
+
+* *turtlebot_gazebo* loads our custom world environment in gazebo and creates a turtlebot robot,
+* *turtlebot_teleop* for manually operating the turtlebot,
+* *gmapping* uses the camera, laser & odometry in order to simultaneously localize the robot and map the environment (SLAM algorithm),
+* *wall_follower* controls the robot and make it continuously follow the left wall,
+* *amcl* is a probabilistic localization system that uses a particle filter to track a robot through a given map,
+* *pick_objects* sends target pick-up and drop-off locations, and notify when those have been reached,
+* *rviz* is used for visualization of the environment, the robot, and any other parameter (laser scan, localization particles, navigation cost maps and path, etc),
+* *add_markers* is used to visualize simulated objects at pick-up and drop-off locations on rviz.
 
 ## Installing
 
