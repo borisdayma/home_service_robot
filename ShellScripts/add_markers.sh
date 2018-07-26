@@ -3,14 +3,14 @@
 # Setup DIR to home directory if necessary (useful for Udacity workspace)
 DIR=$HOME
 
-xterm  -e  " source $DIR/catkin_ws/devel/setup.bash; roscore" & 
+xterm  -e  " source $CATKIN_DIR/devel/setup.bash; roscore" & 
 sleep 5
-xterm  -e  " source $DIR/catkin_ws/devel/setup.bash; roslaunch turtlebot_gazebo turtlebot_world.launch world_file:=$DIR/catkin_ws/src/home_service_robot/World/ushape.world" &
+xterm  -e  " source $CATKIN_DIR/devel/setup.bash; roslaunch turtlebot_gazebo turtlebot_world.launch world_file:=$(rospack find wall_follower)/../World/ushape.world" &
 sleep 5
-xterm  -e  " source $DIR/catkin_ws/devel/setup.bash; rosservice call /gazebo/set_model_state '{model_state: { model_name: mobile_base, pose: { position: { x: -2.7, y: 7.3 ,z: 0 }, orientation: {x: 0, y: 0, z: -0.676, w: 0.737}}}}'" &
+xterm  -e  " source $CATKIN_DIR/devel/setup.bash; rosservice call /gazebo/set_model_state '{model_state: { model_name: mobile_base, pose: { position: { x: -2.7, y: 7.3 ,z: 0 }, orientation: {x: 0, y: 0, z: -0.676, w: 0.737}}}}'" &
 sleep 5
-xterm  -e  " source $DIR/catkin_ws/devel/setup.bash; roslaunch turtlebot_gazebo amcl_demo.launch map_file:=$DIR/catkin_ws/src/home_service_robot/World/my_map.yaml" &
+xterm  -e  " source $CATKIN_DIR/devel/setup.bash; roslaunch turtlebot_gazebo amcl_demo.launch map_file:=$(rospack find wall_follower)/../World/my_map.yaml" &
 sleep 5
-xterm  -e  " source $DIR/catkin_ws/devel/setup.bash; roslaunch turtlebot_rviz_launchers view_navigation.launch" &
+xterm  -e  " source $CATKIN_DIR/devel/setup.bash; roslaunch turtlebot_rviz_launchers view_navigation.launch" &
 sleep 5
-xterm  -e  " source $DIR/catkin_ws/devel/setup.bash; rosrun add_markers add_markers_node" &
+xterm  -e  " source $CATKIN_DIR/devel/setup.bash; rosrun add_markers add_markers_node" &

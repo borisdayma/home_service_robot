@@ -46,8 +46,6 @@ This will clone the full repository, including required ROS packages as submodu
 
 The entire project can be run through the scripts present in `src/ShellScripts`.
 
-Each script contains a `$DIR` variable to be set to the catkin folder path.
-
 The different scripts were developped in the following sequence:
 
 * `test_slam.sh` - generate a map through SLAM while navigating manually
