@@ -2,6 +2,8 @@
 
 CATKIN_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../../.." >/dev/null && pwd )"
 
+source $CATKIN_DIR/devel/setup.bash
+
 xterm  -e  " source $CATKIN_DIR/devel/setup.bash; roscore" & 
 sleep 5
 xterm  -e  " source $CATKIN_DIR/devel/setup.bash; roslaunch turtlebot_gazebo turtlebot_world.launch world_file:=$(rospack find wall_follower)/../World/ushape.world" &
