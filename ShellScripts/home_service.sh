@@ -1,7 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 
-# Setup DIR to home directory if necessary (useful for Udacity workspace)
-DIR=$HOME
+CATKIN_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../../.." >/dev/null && pwd )"
 
 xterm  -e  " source $CATKIN_DIR/devel/setup.bash; roscore" & 
 sleep 5
