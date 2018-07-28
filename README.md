@@ -40,7 +40,9 @@ A script has been developed for quick installation:
 * Ensure you don't have a **catkin_ws** directory as its contents may be deleted.
 * Run `./setup.sh`
 
-This will clone the full repository, including required ROS packages as submodules.
+This will clone the full repository, including required ROS packages as sub-modules.
+
+**Note**: Once installed, do not move or rename the packages folder as the Shell scripts rely on preserving relative paths.
 
 ## Running the scripts
 
