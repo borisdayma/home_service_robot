@@ -32,6 +32,15 @@ The project is made of several ROS packages:
 * *rviz* is used for visualization of the environment, the robot, and any other parameter (laser scan, localization particles, navigation cost maps and path, etc),
 * *add_markers* is used to visualize simulated objects at pick-up and drop-off locations on rviz.
 
+## Future work
+
+The following required improvements have been identified:
+
+* a package needs to be developed to send & receive object pick-up and drop-off targets in real time ;
+* other SLAM packages need to be evaluated and compared for better performance ;
+* the robot needs to be able to identify its initial location automatically ;
+* custom robots need to be added to launch or script files.
+
 ## Installing
 
 A script has been developed for quick installation:
@@ -48,7 +57,7 @@ This will clone the full repository, including required ROS packages as sub-mod
 
 The entire project can be run through the scripts present in `src/ShellScripts`.
 
-The different scripts were developped in the following sequence:
+The different scripts were developed in the following sequence:
 
 * `test_slam.sh` - generate a map through SLAM while navigating manually
 * `wall_follower.sh` - generate a map through SLAM while navigating autonomously following walls
